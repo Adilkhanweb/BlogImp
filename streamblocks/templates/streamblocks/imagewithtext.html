@@ -1,0 +1,11 @@
+<!--imagewithtext.html-->
+{% load humanize %}
+<div class="image-with-text-block flex {{ block_content|length|apnumber }}">
+    {% for block in block_content %}
+        <figure style="width: 200px">
+            <img src="{{ block.image.url }}"
+                 alt="{{ block.text }}" style="height: 200px">
+            <figcaption>{{ block.text }}</figcaption>
+        </figure>
+    {% endfor %}
+</div>

@@ -1,0 +1,30 @@
+{% extends 'streamblocks/base.html' %}
+{% block content %}
+    <nav class="demo">
+        <a href="#" class="brand">
+{#            <img class="logo" src="/img/basket.png"/>#}
+            <span>Picnic CSS</span>
+        </a>
+
+        <!-- responsive-->
+        <input id="bmenub" type="checkbox" class="show">
+        <label for="bmenub" class="burger pseudo button">menu</label>
+
+        <div class="menu">
+            <a href="#" class="pseudo button icon-picture">Demo</a>
+            <a href="#" class="button icon-puzzle">Plugins</a>
+        </div>
+    </nav>
+    <section class="flex five" style="padding: 5rem 1rem">
+        <div class="full fifth-1000">
+
+        </div>
+        <div class="full three-fifth-1000">
+            <h1>{{ page.title }}</h1>
+            {{ page.stream.render }}
+        </div>
+        <div class="full fifth-1000">
+
+        </div>
+    </section>
+{% endblock %}

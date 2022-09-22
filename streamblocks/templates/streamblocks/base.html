@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+    <link rel="stylesheet" title="Github Dark Dimmed" href="https://highlightjs.org/static/demo/styles/github-dark-dimmed.css">
+    {#    <link rel="alternate stylesheet" title="Github" href="https://highlightjs.org/static/demo/styles/github.css">#}
+</head>
+<body>
+{% block content %}
+
+{% endblock %}
+<script>hljs.highlightAll();
+hljs.addPlugin(
+    new CopyButtonPlugin({
+        callback: (text, el) => console.log("Copied to clipboard", text),
+    })
+);</script>
+
+</body>
+</html>
